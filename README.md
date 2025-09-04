@@ -32,7 +32,6 @@ SIH_AIML_Module/
 ## 🚀 Quickstart
 
 ### 1. Install dependencies
-```bash
 pip install -r requirements.txt
 2. Train the Model
 bash
