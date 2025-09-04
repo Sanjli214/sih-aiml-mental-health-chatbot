@@ -26,24 +26,22 @@ Providing a Flask API for backend integration
 Supporting a Streamlit frontend for deployment
 
 📂 Project Structure
+
 sih-aiml-mental-health-chatbot/
 │
-├── data/                                   # Datasets
-│   ├── student_mental_health_dataset.json  # Main dataset (JSON)
-│   ├── student_mental_health_dataset.csv   # Main dataset (CSV)
+├── data/                                   # Datasets for training & evaluation
+│   ├── student_mental_health_dataset.json  # Main dataset (JSON format)
+│   ├── student_mental_health_dataset.csv   # Main dataset (CSV format)
 │   └── augmented_dataset.csv               # (Optional) Generated via paraphrasing
 │
-├── scripts/                                # Core AIML scripts
-│   ├── train_blenderbot.py                 # Fine-tuning script
-│   ├── inference_api.py                    # Flask API for chatbot
-│   └── paraphrase.py                       # Dataset augmentation script
-│
-├── notebooks/                              # Jupyter/Colab notebooks (optional)
-│   └── chatbot_training_notebook.ipynb     # Example training notebook
+├── scripts/                                # Your chatbot scripts
+│   ├── train_blenderbot.py                 # Fine-tuning BlenderBot on student dataset
+│   ├── inference_api.py                    # Flask API to serve chatbot
+│   └── paraphrase.py                       # Augment dataset with paraphrasing
 │
 ├── requirements.txt                        # Python dependencies
-├── README.md                               # Documentation
-└── .gitignore                              # (Optional) Ignore cache/model files
+└── README.md                               # Documentation (your explanation of AIML work)
+
 
 ⚡ Features
 
