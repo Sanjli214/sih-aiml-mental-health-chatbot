@@ -1,78 +1,119 @@
-# sih-aiml-mental-health-chatbot
-🤖 AI/ML module for Smart India Hackathon project — a digital mental health support chatbot for students
+🎓 SIH AIML Module - Digital Mental Health Chatbot
 
-This repository contains the **AI/ML contribution** for the Smart India Hackathon (SIH) Problem Statement:  
+🤖 This repository contains the AI/ML module for the Smart India Hackathon (SIH) Problem Statement:
+"Development of a Digital Mental Health and Psychological Support System for Students in Higher Education"
 
-**"Development of a Digital Mental Health and Psychological Support System for Students in Higher Education"**.
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![HuggingFace](https://img.shields.io/badge/Transformers-HuggingFace-yellow.svg)
+![Flask](https://img.shields.io/badge/Backend-Flask-lightgrey.svg)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red.svg)
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange.svg)
+![Status](https://img.shields.io/badge/Project-SIH%202025-brightgreen.svg)
 
----
+📌 About
 
-## 📂 Project Structure
-SIH_AIML_Module/
-├── data/ # Student-focused dataset (JSON + CSV)
-├── scripts/ # Training + API + augmentation
-├── notebooks/ # (Optional) Colab-ready notebook
-├── requirements.txt # Dependencies
-├── README.md # Documentation
+College students often face stress, anxiety, depression, and burnout.
+This chatbot provides a confidential, stigma-free digital support system with empathetic AI-driven responses and early screening.
 
----
+This repo focuses on the AIML component:
 
-## ⚡ Features
-- **Custom Dataset (200+ Q&A pairs)** for students:
-  - Exam Stress, Sleep Issues, Loneliness, Peer Pressure, Career Anxiety, Burnout, Crisis
-- **Fine-Tuning BlenderBot** on student-specific conversations
-- **Paraphrasing Script** to augment dataset automatically
-- **Flask API** for chatbot deployment
-- **Crisis Detection** (keywords + referral)
-- **Streamlit UI** (to be integrated by frontend team)
-- **MySQL Logging** for chat + screening data
+Training and fine-tuning a student-focused chatbot
 
----
+Augmenting dataset for better performance
 
-## 🚀 Quickstart
+Providing a Flask API for backend integration
 
-### 1. Install dependencies
+Supporting a Streamlit frontend for deployment
+
+📂 Project Structure
+sih-aiml-mental-health-chatbot/
+├── data/                         # Dataset (student mental health Q&A)
+│   ├── student_mental_health_dataset.json
+│   ├── student_mental_health_dataset.csv
+├── scripts/                      # AIML scripts
+│   ├── train_blenderbot.py       # Fine-tuning script
+│   ├── inference_api.py          # Flask API for chatbot
+│   ├── paraphrase.py             # Dataset augmentation
+├── requirements.txt              # Dependencies
+├── README.md                     # Documentation
+
+⚡ Features
+
+Student-specific dataset (200+ Q&A pairs)
+Covers: exam stress, sleep issues, loneliness, peer comparison, career anxiety, burnout, crisis support
+
+Fine-tuned BlenderBot (facebook/blenderbot-400M-distill)
+
+Empathetic emotional responses (not rule-based if-else only)
+
+Crisis detection with emergency referral
+
+Flask API for backend integration
+
+Streamlit UI (handled by frontend team)
+
+MySQL storage for chat + screening logs
+
+🚀 Quickstart
+1. Clone repo
+git clone https://github.com/your-username/sih-aiml-mental-health-chatbot.git
+cd sih-aiml-mental-health-chatbot
+
+2. Install dependencies
 pip install -r requirements.txt
-2. Train the Model
-bash
-Copy code
+
+3. Train the Model
 python scripts/train_blenderbot.py --data_path data/student_mental_health_dataset.json
-3. Run Flask API
-bash
-Copy code
+
+4. Run Flask API
 python scripts/inference_api.py
-4. Paraphrase & Augment Dataset
-bash
-Copy code
+
+5. Augment Dataset
 python scripts/paraphrase.py --input data/student_mental_health_dataset.csv --output data/augmented_dataset.csv
+
 🧩 Tech Stack
-Python (3.9+)
+
+Python 3.9+
 
 Hugging Face Transformers
 
 BlenderBot (facebook/blenderbot-400M-distill)
 
-Flask + Streamlit
+Flask (backend API)
 
-MySQL (storage + analytics)
+Streamlit (frontend UI)
+
+MySQL (logging + analytics)
 
 📊 Dataset
-JSON: data/student_mental_health_dataset.json
 
-CSV: data/student_mental_health_dataset.csv
+student_mental_health_dataset.json → JSON format
 
-Covers multiple student issues with empathetic responses
+student_mental_health_dataset.csv → CSV format
+
+Categories:
+
+Exam Stress
+
+Sleep Issues
+
+Loneliness
+
+Peer Comparison
+
+Career Anxiety
+
+Burnout
+
+Crisis situations
 
 👨‍💻 Contributors
-AIML Module: Chatbot, Dataset, Fine-tuning
 
-Backend/Frontend: Teammates (Flask, Streamlit, DB integration)
+AIML Module: Sanjli Agarwal (Chatbot, dataset, fine-tuning, API)
 
-⚠️ Safety Note
-This chatbot is not a replacement for professional help.
-In case of severe distress, students should be referred to counsellors or helplines.
+Backend/Frontend: Teammates (Flask, Streamlit, MySQL integration)
 
----
+⚠️ Safety Disclaimer
 
-
-Ask ChatGPT
+This chatbot is designed as a supportive companion, not a replacement for professional medical advice.
+If a student shows severe distress, the system redirects to helplines/counsellors.
