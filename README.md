@@ -27,15 +27,23 @@ Supporting a Streamlit frontend for deployment
 
 📂 Project Structure
 sih-aiml-mental-health-chatbot/
-├── data/                         # Dataset (student mental health Q&A)
-│   ├── student_mental_health_dataset.json
-│   ├── student_mental_health_dataset.csv
-├── scripts/                      # AIML scripts
-│   ├── train_blenderbot.py       # Fine-tuning script
-│   ├── inference_api.py          # Flask API for chatbot
-│   ├── paraphrase.py             # Dataset augmentation
-├── requirements.txt              # Dependencies
-├── README.md                     # Documentation
+│
+├── data/                                   # Datasets
+│   ├── student_mental_health_dataset.json  # Main dataset (JSON)
+│   ├── student_mental_health_dataset.csv   # Main dataset (CSV)
+│   └── augmented_dataset.csv               # (Optional) Generated via paraphrasing
+│
+├── scripts/                                # Core AIML scripts
+│   ├── train_blenderbot.py                 # Fine-tuning script
+│   ├── inference_api.py                    # Flask API for chatbot
+│   └── paraphrase.py                       # Dataset augmentation script
+│
+├── notebooks/                              # Jupyter/Colab notebooks (optional)
+│   └── chatbot_training_notebook.ipynb     # Example training notebook
+│
+├── requirements.txt                        # Python dependencies
+├── README.md                               # Documentation
+└── .gitignore                              # (Optional) Ignore cache/model files
 
 ⚡ Features
 
